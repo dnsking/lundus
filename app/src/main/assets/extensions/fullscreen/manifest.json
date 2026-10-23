@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "fullscreen",
+  "version": "1.2",
+  "description": "Full screen",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "fullscreen"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "nativeMessaging",
+    "nativeMessagingFromContent",
+    "geckoViewAddons"
+  ]
+}

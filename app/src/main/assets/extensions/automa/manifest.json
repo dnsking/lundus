@@ -1,0 +1,57 @@
+{
+  "description": "An extension for automating your browser by connecting blocks",
+  "version": "1.44.0",
+  "manifest_version": 2,
+  "name": "Automa",
+  "browser_specific_settings": {
+    "gecko": {
+      "strict_min_version": "91.1.0",
+      "id": "{26ef8318-6349-483c-affa-6c6db6d30517}"
+    }
+  },
+  "background": {
+    "scripts": ["background.bundle.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon-128.png"
+  },
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "commands": {
+    "open-dashboard": {
+      "suggested_key": {
+        "default": "Alt+A",
+        "mac": "Alt+A"
+      },
+      "description": "Open the dashboard"
+    },
+    "element-picker": {
+      "suggested_key": {
+        "default": "Alt+P",
+        "mac": "Alt+P"
+      },
+      "description": "Open element picker"
+    }
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"],
+    "run_at": "document_start",
+    "all_frames": true
+  },
+    {
+      "matches": ["*://*.youtube.com/*", "*://m.youtube.com/*"],
+      "js": ["ytfullscreen.js"],
+      "run_at": "document_end"
+    }],
+  "optional_permissions": ["clipboardRead", "clipboardWrite", "downloads", "notifications", "cookies"],
+  "permissions": ["tabs", "proxy", "menus", "alarms", "storage", "webNavigation", "unlimitedStorage", "<all_urls>",
+    "nativeMessaging",
+    "nativeMessagingFromContent",
+    "geckoViewAddons"],
+  "web_accessible_resources": ["/elementSelector.css", "/icon-128.png", "/Inter-roman-latin.var.woff2", "/locales/*", "elementSelector.bundle.js"],
+  "content_security_policy": "script-src 'self' 'unsafe-inline' https:; object-src 'self'"
+}

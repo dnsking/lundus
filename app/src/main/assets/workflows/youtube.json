@@ -1,0 +1,19 @@
+[
+  {
+    "action": "insert",
+    "target": "input.ytSearchboxComponentInput",
+    "value": "iphone 18 review"
+  },
+  {
+    "action": "click",
+    "target": "button.ytSearchboxComponentSearchButton"
+  },
+  {
+    "action": "click",
+    "target": "#video-title"
+  },
+  {
+    "action": "execute",
+    "value": "async function setVideoTime() {\n  // Retry until the video tag is found on the DOM\n  while (!document.getElementsByTagName('video')[0]) {\n    await new Promise(r => setTimeout(r, 200));\n  }\n\n  // Set the position\n  document.getElementsByTagName('video')[0].currentTime = 40;\n\n  // Continue to the next Automa block\n  automaNextBlock();\n}\n\nsetVideoTime();;"
+  }
+]

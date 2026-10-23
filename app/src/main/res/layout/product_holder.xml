@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Product Image Container -->
+    <!-- Note: FrameLayout used as a card via background drawable -->
+    <FrameLayout
+        android:id="@+id/frameProductImage"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_gravity="top|center_horizontal">
+        <com.github.mmin18.widget.RealtimeBlurView
+
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:realtimeBlurRadius="20dp"
+
+            android:clipToOutline="true"
+            android:background="@drawable/rounded_overlay"
+            app:realtimeOverlayColor="#20000000" />
+        <ImageView
+            android:id="@+id/ivProduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_overlay_white"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    </FrameLayout>
+
+    <!-- Product Title -->
+    <TextView
+        android:id="@+id/tvProductTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:text=""
+        android:textColor="#fafafa"
+        android:maxLines="2"
+        android:textSize="16sp" />
+
+    <!-- Price -->
+    <TextView
+        android:id="@+id/tvProductPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="#fafafa"
+        android:textSize="14sp" />
+
+
+    <ImageView
+        android:id="@+id/ivqrProduct"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+    <!-- Shop Button -->
+    <!-- Positioned relative to the bottom of the screen -->
+
+
+</LinearLayout>
