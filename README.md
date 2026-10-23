@@ -1,16 +1,2 @@
-# TV Bro
 
-Simple web browser optimized to use with TV remote
-
-Features:
-- working with TV remote
-- tabs and bookmarks support
-- voice search support
-- switch user agent support
-- use Android builtin web rendering engine (WebKit/Blink based)
-- built-in download manager
-- browsing history
-- shortcuts
-
-Discussion pages:
-- https://forum.xda-developers.com/android/apps-games/tv-bro-browser-android-based-tvs-t3545295
+Lundus Browser is a media-first AI web browser built natively for FireTV. As you consume media, the browser's AI engine scans the current on-screen frame to detect and identify physical products. It then automatically queries Amazon to find the exact or closest matching product listings. To solve the classic "10-foot UI" problem of TV navigation, Lundus instantly generates a dynamic QR code on the screen. Viewers can simply point their smartphone camera at the TV to immediately view the Amazon listing and complete the purchase on their mobile device.
